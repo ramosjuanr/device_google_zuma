@@ -34,6 +34,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/health \
+    system/lib64/libcuttlefish_command_util.so \
+    system/lib64/libcuttlefish_fs.so \
+	system/lib64/libcuttlefish_run_cvd_proto.so \
+	system/lib64/libcuttlefish_utils.so \
+	system/lib64/libcuttlefish_utils_result.so \
+	system/lib64/libfruit.so
+
+    
 #
 # All components inherited here go to vendor image
 #
